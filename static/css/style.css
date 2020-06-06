@@ -1,0 +1,780 @@
+/*--------------- BASIC STYLING --------------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Mono" !important;
+  background: #0f0f0f !important;
+  color: #fff !important;
+}
+
+.whitespace {
+  width: 100%;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .whitespace {
+    display: none;
+  }
+}
+/*--------------- BASIC STYLING --------------- */
+
+/*--------------- TYPEWRITER EFFECT --------------- */
+.line {
+  width: 24em;
+  top: 50%;
+  margin: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 6s steps(40) 1s 3 normal both,
+    blinkTextCussor 250ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes blinkTextCussor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/*--------------- TYPEWRITER EFFECT --------------- */
+
+/*--------------- BARRA DE NAVEGACION --------------- */
+nav {
+  width: 100%;
+  background: #0f0f0f;
+  height: 80px;
+  position: fixed;
+  z-index: 1;
+}
+
+nav #brand {
+  float: left;
+  display: block;
+  margin-left: 82px;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+nav #brand a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+nav #brand a:hover {
+  text-decoration: none;
+}
+
+nav #menu {
+  float: left;
+  right: 80px;
+  position: fixed;
+}
+
+nav #menu li {
+  padding-left: 40px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 80px;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+nav #menu li span {
+  font-weight: 700;
+}
+
+nav #menu li a {
+  color: #fff;
+}
+
+nav #menu li a:hover {
+  text-decoration: none;
+}
+
+#toggle {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-weight: 300;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  font-weight: 300;
+  z-index: 2;
+  cursor: pointer;
+  top: -2px;
+  line-height: 80px;
+}
+
+#resize {
+  z-index: 1;
+  top: 0px;
+  position: fixed;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+#resize #menu {
+  height: 90px;
+  position: absolute;
+  left: 45%;
+  transform: translateX(-40%);
+  text-align: center;
+  display: table-cell;
+  vertical-align: center;
+}
+
+#resize #menu li {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 50px;
+  min-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+  margin-top: 140px;
+}
+
+#resize #menu li a {
+  color: #fff;
+}
+
+#resize #menu li a:hover {
+  text-decoration: none;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+    margin-right: 4px;
+  }
+
+  nav #brand {
+    margin-left: 24px;
+  }
+
+  #menu a {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  #resize li span {
+    font-weight: bolder;
+  }
+
+  nav #menu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
+/*--------------- BARRA DE NAVEGACION --------------- */
+
+/*--------------- PORTADA --------------- */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 58px;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 26px;
+  }
+}
+/*--------------- PORTADA --------------- */
+
+/*--------------- ICONO DE SCROLL --------------- */
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 0;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: translate(-50%, 0) rotate(45deg);
+  animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -20px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 90px) rotate(45deg);
+    opacity: 0;
+  }
+}
+/*--------------- ICONO DE SCROLL --------------- */
+
+/*--------------- INDEX.HTML --------------- */
+h2 {
+  text-align: center;
+}
+
+.vertical {
+  margin-top: 40px;
+  border-left: 1px solid #fff;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+}
+
+.project {
+  height: 500px;
+}
+
+.project1 h3 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10em;
+  left: 20%;
+  font-size: 30px;
+}
+
+.project1 {
+  background: url(../img/experiencia-collage.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project1::after {
+  font-family: "Roboto Mono";
+  font-size: 36px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
+  bottom: 0;
+}
+
+.project2 h4 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3.5em;
+  left: 46%;
+  font-size: 30px;
+}
+.project2 {
+  background: url(../img/proyectos-collage.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+}
+
+.project2::after {
+  font-family: "Roboto Mono";
+  font-size: 36px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 80%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+.project3 h5 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10em;
+  left: 25%;
+  font-size: 30px;
+}
+.project3 {
+  background: url(../img/sobre-mi-collage.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project3::after {
+  font-family: "Roboto Mono";
+  font-size: 36px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 80%;
+  left: -50%;
+  right: 0;
+  bottom: 0;
+}
+
+.project4 h6 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  font-size: 30px;
+}
+
+.project4 {
+  background: url(../img/contacto.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project4::after {
+  font-family: "Roboto Mono";
+  font-size: 36px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 10%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 90% !important;
+    margin: 14px auto;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  .project1::after,
+  .project2::after,
+  .project3::after,
+  .project4::after {
+    display: none;
+  }
+}
+/*--------------- INDEX.HTML --------------- */
+
+/*--------------- FOOTER --------------- */
+.collab {
+  text-align: right;
+}
+
+.collab p {
+  font-weight: lighter !important;
+  margin-bottom: 20px;
+}
+
+.hr {
+  background: rgba(255, 255, 255, 0.2);
+  height: 1px;
+}
+
+.info p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.info p {
+  color: grey;
+  font-weight: lighter;
+}
+
+.info li {
+  font-weight: lighter;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+#fb::before {
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+#ig::before {
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #8a2387;
+  background: -webkit-linear-gradient(to right, #f27121, #e94057, #8a2387);
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+}
+
+#tw::before {
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+#yt::before {
+  display: inline-block;
+  content: "";
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+#media,
+#address {
+  text-align: right;
+}
+
+#media ul {
+  list-style: none;
+}
+
+#media ul li {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .collab,
+  #personal,
+  #media,
+  #address {
+    text-align: center;
+  }
+
+  .info ul {
+    margin: 0 0 0 -22px;
+    padding: 0;
+  }
+}
+
+.agradecimiento {
+  margin-top: 15%;
+}
+/*--------------- FOOTER --------------- */
+
+/*--------------- EXPERIENCIA.HTML --------------- */
+
+.hero-content {
+  margin-left: 0%;
+}
+
+.hero-content p {
+  font-weight: 300;
+  line-height: 36px;
+  color: grey;
+}
+
+.hero-content h2 {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 50px;
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+section img {
+  width: 100%;
+}
+section p {
+  font-weight: 300;
+  line-height: 36px;
+  color: grey;
+}
+
+/*---------------SOBRE-MI.HTML --------------- */
+
+.about {
+  height: 500px;
+  margin-top: 120px;
+}
+
+.image1 {
+  background: url(../img/bandera-mexico.jpg) no-repeat 50% 70%;
+}
+
+.image2 {
+  background: url(../img/postres-collage.jpg) no-repeat 50% 70%;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
+.image3 {
+  background: url(../img/estadio-dodgers.jpg) no-repeat 50% 70%;
+  max-width: 100%;
+}
+.image4 {
+  background: url(../img/computadora-programando.jpg) no-repeat 50% 70%;
+  max-width: 100%;
+}
+/*---------------SOBRE-MI.HTML --------------- */
+
+/*--------------- CONTACTO.HTML --------------- */
+
+.row {
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.anim750 {
+  transition: all 750ms ease-in-out;
+}
+
+#Awesome {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+
+  backface-visibility: hidden;
+}
+
+#Awesome .sticky {
+  transform: rotate(45deg);
+}
+
+#Awesome:hover .sticky {
+  transform: rotate(10deg);
+}
+
+#Awesome .sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+}
+
+#Awesome .reveal .circle {
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+
+  font-family: "helvetica neue", arial;
+  font-weight: 200;
+  line-height: 140px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+#Awesome .reveal .circle {
+  background: #fafafa;
+}
+
+#Awesome .circle_wrapper {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+#Awesome .circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  margin: 20px;
+
+  border-radius: 999px;
+}
+
+#Awesome .back {
+  height: 10px;
+  top: 30px;
+}
+
+#Awesome:hover .back {
+  height: 90px;
+  top: 110px;
+}
+
+#Awesome .back .circle {
+  margin-top: -130px;
+  background-color: #000000;
+
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgba(251, 236, 63, 0),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+#Awesome:hover .back .circle {
+  margin-top: -50px;
+}
+
+#Awesome .front {
+  height: 150px;
+  bottom: 0;
+  top: auto;
+
+  -webkit-box-shadow: 0 -140px 20px -140px rgba(0, 0, 0, 0.3);
+}
+
+#Awesome:hover .front {
+  height: 70px;
+
+  -webkit-box-shadow: 0 -60px 10px -60px rgba(0, 0, 0, 0.1);
+}
+
+#Awesome .front .circle {
+  margin-top: -10px;
+  background: #000000;
+
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgba(251, 236, 63, 0) 75%,
+    #000000 95%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgba(251, 236, 63, 0) 75%,
+    #000000 95%
+  );
+  background-image: linear-gradient(
+    bottom,
+    rgba(251, 236, 63, 0) 75%,
+    #000000 95%
+  );
+}
+
+#Awesome h2 {
+  font-family: "helvetica neue", arial;
+  font-weight: 200;
+  text-align: center;
+  position: absolute;
+  width: 180px;
+  height: 140px;
+  line-height: 140px;
+
+  transition: opacity 50ms linear 400ms;
+}
+
+#Awesome:hover h2 {
+  opacity: 0;
+
+  transition: opacity 50ms linear 300ms;
+}
+
+#Awesome:hover .front .circle {
+  margin-top: -90px;
+  background-color: #000000;
+  background-position: 0 100px;
+}
+
+/*--------------- CONTACTO.HTML --------------- */
+
+/*--------------- PROYECTOS.HTML --------------- */
+
+.prev,
+.next p {
+  color: grey;
+}
+
+.prev p {
+  text-align: left;
+}
+
+.next p {
+  text-align: right;
+}
+
+.texto {
+  font-size: 1rem;
+}
+
+.image {
+  background: url(../img/paginaweb-collage.jpg) no-repeat 50% 70%;
+}
+
+.logos {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 45%;
+}
+/*--------------- PROYECTOS.HTML --------------- */

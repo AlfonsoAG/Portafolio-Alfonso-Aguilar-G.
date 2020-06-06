@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="AlfonsoAG" />
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/d5f4c0a6ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MAIN.JS -->
+    <script src="../static/js/main.js" type="text/javascript"></script>
+    <!-- NORMALIZE.CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for ('static', filename='css/normalize.css') }}"
+    />
+    <!-- ANIMATED ON SCROLL -->
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="../static/img/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for ('static', filename='css/style.css') }}"
+    />
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- GOOGLE FAMILY FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+    <!-- ANIMATED CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <!--------------- BARRA DE NAVEGACION --------------->
+    <nav>
+      <span id="brand">
+        <a href="{{ url_for('index') }}" title="Inicio" itemprop="name"
+          ><img
+            src="../static/img/favicon.png"
+            alt="logo"
+            style="border-radius: 50%;"
+          />
+          Alfonso Aguilar G.</a
+        >
+      </span>
+
+      <ul id="menu">
+        <li>
+          <a href="{{ url_for('index') }}" title="Inicio"
+            >Inicio<span>.</span></a
+          >
+        </li>
+        <li>
+          <a href="{{ url_for('experiencia') }}" title="Experiencia profesional"
+            >Experiencia profesional<span>.</span></a
+          >
+        </li>
+        <li>
+          <a href="{{ url_for('proyectos') }}">Proyectos<span>.</span></a>
+        </li>
+        <li>
+          <a href="{{ url_for('perfil') }}" title="Sobre mi"
+            >Sobre mi<span>.</span></a
+          >
+        </li>
+        <li>
+          <a href="{{ url_for('contacto') }}">Contactame<span>.</span></a>
+        </li>
+      </ul>
+
+      <div id="toggle">
+        <div class="span">Menu.</div>
+      </div>
+    </nav>
+
+    <div id="resize">
+      <div class="close-btn">Cerrar.</div>
+
+      <ul id="menu">
+        <li>
+          <a href="{{ url_for('index') }}">Inicio<span>.</span></a>
+        </li>
+        <li>
+          <a href="{{ url_for('experiencia') }}">Experiencia<span>.</span></a>
+        </li>
+        <li>
+          <a href="{{ url_for('proyectos') }}">Proyectos<span>.</span></a>
+        </li>
+        <li>
+          <a href="{{ url_for('perfil') }}">Sobre mi<span>.</span></a>
+        </li>
+        <li>
+          <a href="{{ url_for('contacto') }}">Contactame<span>.</span></a>
+        </li>
+      </ul>
+    </div>
+    <!--------------- BARRA DE NAVEGACION --------------->
+    {% block content %} {% endblock %}
+    <!--------------- FOOTER --------------->
+    <div data-aos="zoom-in-up">
+      <div class="footer">
+        <div class="container">
+          <br /><br />
+
+          <div class="collab">
+            <div class="row">
+              <div class="col-lg-12">
+                <p>
+                  ¿Requieres algun servicio profesional, una asesoria,
+                  contratarme o simplemente platicar?
+                  <br />
+                  Contactame
+                  <a href="mailto:alfonso.aguilarg@hotmail.com" target="_blank">
+                    <img
+                      src="../static/img/flecha-abajo.svg"
+                      style="background-color: #fff; border-radius: 50%;"
+                      alt="flecha-abajo"
+                  /></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="hr">
+            <div class="row"></div>
+          </div>
+
+          <br /><br />
+
+          <div class="info">
+            <div class="row">
+              <div class="col-lg-4" id="personal">
+                <p>
+                  Mensaje
+                </p>
+                <p style="color: #fff; font-size: 18px;">
+                  <a title="Instagram" style="color: unset;" target="_blank"
+                    >#QuedateEnCasa
+                    <br />
+                    #LavaTusManos</a
+                  >
+                </p>
+                <br /><br />
+              </div>
+
+              <div class="col-lg-4" id="media">
+                <p>
+                  Sigueme en redes sociales
+                </p>
+
+                <ul>
+                  <li id="fb">
+                    <a
+                      href="http://linkedin.com/in/aguilargrimaldo96/"
+                      title="Linkedin"
+                      style="color: unset;"
+                      target="_blank"
+                      >In</a
+                    >
+                  </li>
+                  <li id="ig">
+                    <a
+                      href="https://www.instagram.com/aguilar_grimaldo/?hl=es-la"
+                      title="Instagram"
+                      style="color: unset;"
+                      target="_blank"
+                      >Ig</a
+                    >
+                  </li>
+                  <li id="tw">
+                    <a
+                      href="https://github.com/AlfonsoAG"
+                      title="GitHub"
+                      style="color: unset;"
+                      target="_blank"
+                      >Gh</a
+                    >
+                  </li>
+                  <li id="yt">
+                    <a
+                      href="https://codepen.io/AfonsoAG"
+                      title="CodePen"
+                      style="color: unset;"
+                      target="_blank"
+                      >Cp</a
+                    >
+                  </li>
+                </ul>
+
+                <br /><br />
+              </div>
+
+              <div class="col-lg-4" id="address">
+                <p>
+                  Mandame un correo
+                </p>
+                <p style="color: #fff; font-size: 18px;">
+                  <a
+                    href="mailto:alfonso.aguilarg@hotmail.com"
+                    title="Enviame un correo"
+                    style="color: unset;"
+                    target="_blank"
+                    itemprop="email"
+                    >alfonso.aguilarg@hotmail.com</a
+                  >
+                </p>
+                <div class="agradecimiento">
+                  <p>Hecho con <i class="far fa-heart"></i> por Alfonso</p>
+                </div>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------- FOOTER --------------->
+  </head>
+</html>

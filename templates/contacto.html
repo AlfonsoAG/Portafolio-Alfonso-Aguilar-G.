@@ -1,0 +1,91 @@
+{% extends "layout.html" %} {% block content %}
+<!-- CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/style.css') }}"
+/>
+<!-- ANIMATED CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+<!-- NORMALIZE.CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/normalize.css') }}"
+/>
+<!-- ANIMATED ON SCROLL -->
+<link
+  href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- ANIMATED CSS -->
+<title>Contacto | Alfonso Aguilar G.</title>
+<!--------------- MENSAJE --------------->
+<body>
+  <div class="container">
+    <div class="hero-content">
+      <br /><br />
+
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 class="animate__animated animate__zoomIn animate__delay-1s">
+            Ponte en contacto conmigo
+          </h1>
+          <br />
+          <p class="animate__animated animate__zoomIn animate__delay-2s">
+            ¿Necesitas que haga un trabajo para ti? Ponte en contacto conmigo y
+            platiquemos sobre tu idea.
+            <br />
+            ¿Necesitas alguna asesoría? Mándame un correo y platicamos sobre
+            como podemos resolver tu problema.
+            <br />
+            ¿Quieres que trabaje en tu empresa? Contáctame y platiquemos sobre
+            algún puesto y como mi experiencia puede aportar a tu organización.
+            <br />
+            ¿Gustas solamente platicar y ser amigos? Sígueme en mis redes
+            sociales, hablemos acerca de temas interesantes y seamos amigos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------- MENSAJE --------------->
+  <div class="whitespace"></div>
+  <!--------------- EFECTO DE NOTA --------------->
+  <div data-aos="fade-down">
+    <div id="Awesome" class="anim750">
+      <div class="reveal circle_wrapper">
+        <div class="circle" style="color: #000000;">Hablame!</div>
+      </div>
+
+      <div class="sticky anim750">
+        <div class="front circle_wrapper anim750">
+          <div class="circle anim750"></div>
+        </div>
+      </div>
+
+      <h2>Oye!</h2>
+
+      <div class="sticky anim750">
+        <div class="back circle_wrapper anim750">
+          <div class="circle anim750"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------- EFECTO DE NOTA --------------->
+
+  <!-- GREENSOCK CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- MAIN.JS -->
+  <script src="../static/js/main.js" type="text/javascript"></script>
+</body>
+{% endblock %}

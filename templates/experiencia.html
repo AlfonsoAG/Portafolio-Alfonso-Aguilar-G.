@@ -1,0 +1,137 @@
+{% extends "layout.html" %} {% block content %}
+<!-- CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/style.css') }}"
+/>
+<!-- ANIMATED ON SCROLL -->
+<link
+  href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- ANIMATED CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+<!-- NORMALIZE.CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/normalize.css') }}"
+/>
+<!-- NORMALIZE.CSS -->
+<title>Experiencia | Alfonso Aguilar G.</title>
+<body>
+  <div class="wrapper">
+    <div class="whitespace"></div>
+
+    <!--------------- INICIO --------------->
+    <div class="container">
+      <div class="hero-content">
+        <br /><br />
+
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="animate__animated animate__bounceInUp">
+              Experiencia profesional.
+              <a
+                style="color: unset;"
+                href="../static/documents/CV Alfonso Aguilar Grimaldo.pdf"
+                target="_blank"
+                title="Descarga mi CV en PDF o imprimelo."
+              >
+                <button type="button" class="btn btn-outline-dark">
+                  <p style="color: #fff; margin: auto;">
+                    Descargar CV en PDF
+                  </p>
+                </button>
+              </a>
+            </h1>
+
+            <br />
+            <p class="animate__animated animate__fadeIn">
+              Estudie negocios internacionales con enfoque en comercio exterior
+              y negociación internacional. Cuento con experiencia en el área de
+              ventas, la administración, compras, licitaciones, finanzas,
+              servicio al cliente y recursos humanos. Me gustan la creación de
+              nuevos negocios, la gerencia de proyectos y el área de la
+              programación con enfoque en la inteligencia de negocios y el
+              análisis de datos, aprendiendo continuamente estas ultimas
+              materias. Actualmente me encuentro estudiando programación, tengo
+              conocimientos básico-intermedio en lenguajes de programación como
+              HTML, CSS, JavaScript, Python y tengo conocimientos en frameworks
+              como "Flask","Bootstrap" y "GSAP JS"
+              <br />
+              Me gusta el análisis de datos y la inteligencia de negocios,
+              paralelamente estoy estudiando estas dos últimas materias para
+              conjugarlas con mi profesión.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- INICIO --------------->
+
+    <!--------------- CONTENIDO --------------->
+
+    <section class="perfil">
+      <div data-aos="zoom-in">
+        <img src="../static/img/juntas.jpg" alt="" />
+      </div>
+      <hr />
+      <p class="animate__animated animate__fadeIn">
+        Labore en una empresa de construcción en el área de compras llevando a
+        cabo toda la recopilación de la información de las compras que se
+        hacían, recabando información sobre los proveedores, negociación con
+        estos últimos, ordenes de compras, apoyar en el abastecimiento de las
+        obras del material necesario para su construcción y que estas se apeguen
+        a los lineamientos estipulados en el presupuesto, búsqueda de
+        licitaciones en el portal de “CompraNET” y en diversas instituciones de
+        gobierno donde se llevasen a cabo obra pública, posteriormente
+        participaba en el armado del expediente de licitación de acuerdo a los
+        lineamientos correspondientes y entregado a la institución pertinente.
+        <br />
+        Paralelamente estuve en el area de ventas de una empresa encargada de
+        llevar el outsourcing de las empresas, mi puesto era asesor comercial y
+        entre mis labores estaban la prospección de clientes, realizando
+        cotizaciones a estos últimos, darle seguimiento a la venta y la atención
+        al cliente posterior a la compra.
+      </p>
+      <hr />
+      <div data-aos="zoom-in">
+        <img src="../static/img/viajes.jpg" alt="" />
+      </div>
+      <hr />
+      <p class="animate__animated animate__fadeIn">
+        En mi último empleo labore en un emprendimiento que lleve a cabo con un
+        grupo de persona, en una agencia de viajes fui gerente administrativo y
+        de ventas, donde tuve entre mis labores la prospección de clientes,
+        supervisión y seguimiento de las ventas, servicio al cliente,
+        reclutamiento de personal de ventas y operativo, trabajar en el
+        cumplimiento de los objetivos establecidos logrando las metas de ventas
+        mensuales, labores administrativos, contables y financieros, pago
+        bancarios, trato con los proveedores, creación de estrategias
+        comerciales y uso de marketing digital dentro de la empresa, relaciones
+        publicas con agentes del gremio, facturación y manejo de KPI’s.
+      </p>
+      <hr />
+    </section>
+
+    <!--------------- CONTENIDO --------------->
+
+    <br /><br /><br /><br />
+  </div>
+
+  <!-- GREENSOCK CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- MAIN.JS -->
+  <script src="../static/js/main.js" type="text/javascript"></script>
+</body>
+{% endblock %}

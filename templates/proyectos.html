@@ -1,0 +1,120 @@
+{% extends "layout.html" %} {% block content %}
+<!-- ANIMATED ON SCROLL -->
+<link
+  href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- NORMALIZE.CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/normalize.css') }}"
+/>
+<!-- NORMALIZE.CSS -->
+<title>Proyectos | Alfonso Aguilar G.</title>
+<body>
+  <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+    <div class="whitespace"></div>
+
+    <!--------------- PROYECTO 1 --------------->
+    <div data-aos="fade-down">
+      <div class="container">
+        <div class="hero-content">
+          <br /><br />
+          <div class="row">
+            <div class="col-lg-12">
+              <br />
+
+              <h1>
+                Portafolio | Alfonso Aguilar G.
+              </h1>
+              <br /><br />
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <p>Tipo de proyecto :</p>
+                  <h2 class="texto">
+                    Desarrollo de una pagina web
+                  </h2>
+                </div>
+
+                <div class="col-lg-4">
+                  <p>Tecnologias usadas :</p>
+                  <h3 class="texto">
+                    "Python","Flask","HTML","CSS" y "JS"
+                  </h3>
+                </div>
+
+                <div class="col-lg-4">
+                  <p itemprop="url">Links del proyecto :</p>
+                  <h4 class="texto">
+                    <a href="/proyectos" title="Repositorio de GitHub">
+                      <img
+                        class="logos"
+                        src="../static/img/github-logo.svg"
+                        alt="logo-github"
+                    /></a>
+                    <a href="/proyectos" title="Link del sitio web">
+                      <img
+                        class="logos"
+                        src="../static/img/logo-link.svg"
+                        alt="logo-github"
+                    /></a>
+                  </h4>
+                </div>
+              </div>
+              <br />
+              <p itemprop="url">
+                Desarrollo de un portafolio/pagina web personal, usando como
+                lenguajes de programación en el backend Python y usando el
+                framework “Flask” y en el frontend usando lenguajes como HTML,
+                CSS y JavaScript, usando frameworks de CSS como “Bootstrap”,
+                ”animated.css” y “Normalize.css” para mantener los estilos
+                similares en los navegadores y aplicando frameworks de
+                JavaScript como “GSAP” y librerías como “JQuery” y “Animated on
+                Scroll”. Usando como guía el código del usuario “codegridweb” y
+                su repositorio en
+                <a
+                  href="https://github.com/codegridweb/Minimal-Portfolio-Website"
+                  style="color: #fff;"
+                  >GitHub</a
+                >
+                .Modificando parte del código para mi proyecto y añadiendo
+                nuevas funciones para este como integrar datos estructurados
+                desde schema.org para la posición buscadores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------- PROYECTO 1 --------------->
+
+    <!--------------- IMAGEN PROYECTO 1 --------------->
+    <div data-aos="fade-down">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 about image"></div>
+        </div>
+      </div>
+    </div>
+    <!--------------- IMAGEN PROYECTO 1 --------------->
+
+    <br /><br />
+
+    <div class="whitespace"></div>
+
+    <br /><br /><br /><br />
+  </div>
+
+  <!-- GREENSOCK CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- MAIN.JS -->
+  <script src="../static/js/main.js" type="text/javascript"></script>
+</body>
+{% endblock %}

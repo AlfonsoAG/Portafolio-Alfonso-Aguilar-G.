@@ -1,0 +1,128 @@
+{% extends "layout.html" %} {% block content %}
+<!-- ANIMATED ON SCROLL -->
+<link
+  href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- NORMALIZE.CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/normalize.css') }}"
+/>
+<!-- CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for ('static', filename='css/style.css') }}"
+/>
+<title>Portafolio | Alfonso Aguilar G.</title>
+<body>
+  <div class="wrapper">
+    <!--------------- PORTADA --------------->
+    <div class="hero">
+      <div class="header">
+        <h1 class="line anim-typewriter">
+          Hola extraño,
+          <br />
+          Te invito a conocerme.
+        </h1>
+      </div>
+    </div>
+
+    <div class="scroll-down"></div>
+    <!--------------- PORTADA --------------->
+
+    <!--------------- CONTENIDO --------------->
+    <div class="container-fluid">
+      <br /><br /><br />
+      <div data-aos="zoom-in">
+        <h2>Contenido</h2>
+      </div>
+      <div class="vertical"></div>
+      <br />
+
+      <div class="whitespace"></div>
+      <div class="whitespace"></div>
+
+      <div data-aos="fade-down">
+        <div class="row">
+          <div class="col-lg-8"></div>
+          <div class="col-lg-4 project project1">
+            <h3>
+              <a href="{{ url_for('experiencia') }}" style="color: unset;"
+                >Experiencia profesional.
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="whitespace"></div>
+
+      <div data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 project project2">
+            <h4>
+              <a href="{{ url_for('proyectos') }}" style="color: unset;"
+                >Proyectos.
+              </a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="col-lg-6"></div>
+      </div>
+
+      <div class="whitespace"></div>
+
+      <div data-aos="fade-down">
+        <div class="row">
+          <div class="col-lg-7"></div>
+
+          <div class="col-lg-4 project project3">
+            <h5>
+              <a href="{{ url_for('perfil') }}" style="color: unset;"
+                >Sobre mi.
+              </a>
+            </h5>
+          </div>
+        </div>
+
+        <div class="col-lg-1"></div>
+      </div>
+
+      <div class="whitespace"></div>
+
+      <div data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-1"></div>
+
+          <div class="col-lg-5 project project4">
+            <h6>
+              <a href="{{ url_for('contacto') }}" style="color: unset;"
+                >Contactame.
+              </a>
+            </h6>
+          </div>
+        </div>
+
+        <div class="col-lg-6"></div>
+      </div>
+      <div class="whitespace"></div>
+      <div class="row"></div>
+    </div>
+    <!--------------- CONTENIDO --------------->
+
+    <br /><br /><br /><br />
+  </div>
+
+  <!-- GREENSOCK CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- MAIN.JS -->
+  <script src="../static/js/main.js" type="text/javascript"></script>
+</body>
+{% endblock %}
